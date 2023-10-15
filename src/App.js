@@ -1,23 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import Layout from './components/Layout';
+import { prompt } from './components/utils/prompt';
+import DataTable from './components/Table';
+import { useEffect } from 'react';
+import { loadData } from './components/app/rowsSlice';
+import { useDispatch } from 'react-redux';
+
+const addData = (dispatch) => {
+  const data = require('./components/utils/data.json')
+  let counter = 0
+  const rows = []
+  for (const muscle in data) {
+    for (const workout in data[muscle]) {
+        let tempRow = {
+            'id': ++counter,
+            'muscle': muscle,
+            'exercise': workout,
+            'instructions': data[muscle][workout]['instructions']
+        }
+        rows.push(tempRow)
+    }
+  }
+  dispatch(loadData(rows))
+}
+
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    // Get data
+    addData(dispatch)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        {prompt()}
+        <DataTable/>
+      </Layout>
     </div>
   );
 }

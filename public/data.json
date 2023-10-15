@@ -1,0 +1,43 @@
+{
+    "chest": {
+        "barbel bench press": {
+            "instructions": "lie with your glutes and shoulders in contact with the bench, feet flat on the ground. push the b up."
+        },
+        "incline barbell bench press": {
+            "instructions": "lie with your glutes in the seat, shoulders in contact with the bench. push the b up."
+        },
+        "decline barbel bench press": {
+            "instructions": "lie with your glute in contact with the bench, back pressed against it too. push the b up."
+        }
+    },
+    "bicep": {
+        "seated incline dumbell curl": {
+            "instructions": "sit on the bench with a 60 degree incline. curl both dumbells at the same time as if you were pushing them to the ceiling."
+        },
+        "ez bar standing barbell curl, wide grip": {
+            "instructions": "stand with feet at shoulder width, curl the bar without swinging your arms."
+        },
+        "standing barbell curl, overhand grib": {
+            "instructions": "stand with feet at shoulder witdth, curl the bar without swinging your arm."
+        }
+    },
+    "tricep": {
+        "standing cable tricep pushdown, rope": {
+            "instructions": ""
+        }
+    },
+    "shoulder": {
+        "seated dumbbelll overhead press": {
+            "instructions": ""
+        }
+    },
+    "back": {
+        
+    },
+    "hamstring": {
+
+    },
+    "quad": {
+
+    }
+}
